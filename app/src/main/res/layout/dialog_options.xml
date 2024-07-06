@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/dialog_settings.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Ayar öğelerini buraya ekleyin -->
+
+    <LinearLayout
+        android:id="@+id/header_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F44336"
+        android:backgroundTint="#00FFFFFF"
+        android:foreground="@drawable/close_icon"
+        android:foregroundTint="#00FFFFFF"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="Settings"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:onClick="closeDialog"
+            app:srcCompat="@drawable/close_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pomo_lenght"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pomo_lenght_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Pomodoro Lenght" />
+
+        <ImageButton
+            android:id="@+id/pomoLenghtDecButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            app:srcCompat="@drawable/baseline_remove_24" />
+
+        <TextView
+            android:id="@+id/pomo_lenght_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="25" />
+
+        <ImageButton
+            android:id="@+id/pomoLenghtIncButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            app:srcCompat="@drawable/increment_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/short_lenght"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/short_lenght_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Short Break Lenght" />
+
+        <ImageButton
+            android:id="@+id/shortBreakDecLnghtButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            app:srcCompat="@drawable/baseline_remove_24" />
+
+        <TextView
+            android:id="@+id/short_lenght_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="25" />
+
+        <ImageButton
+            android:id="@+id/shortBreakIncLnghtButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            app:srcCompat="@drawable/increment_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/long_lenght"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/long_lenght_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Long Break Lenght" />
+
+        <ImageButton
+            android:id="@+id/longBreakDecLnghtButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            app:srcCompat="@drawable/baseline_remove_24" />
+
+        <TextView
+            android:id="@+id/long_lenght_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="25" />
+
+        <ImageButton
+            android:id="@+id/longBreakIncLnghtButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            app:srcCompat="@drawable/increment_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sound_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/sound_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sound" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:useMaterialThemeColors="true" />
+    </LinearLayout>
+
+
+</LinearLayout>
