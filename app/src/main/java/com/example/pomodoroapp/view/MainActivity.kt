@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             val timeText = String.format("%02d\n%02d", minutes, seconds)
             binding.timeTxt.text = timeText
 
-            if (time == 3) {
+            if (time == 3 && viewModel.soundEnabled.value==true) {
                 countdownMediaPlayer.start()
             }
         })
@@ -80,6 +80,9 @@ class MainActivity : AppCompatActivity() {
             binding.timeTxt.setTextColor(resources.getColor(mode.clockColor))
             binding.stateText.text=mode.modeName
         })
+
+
+
     }
 
     private fun updateButtonBackgroundColor(button: View, colorResId: Int) {
@@ -114,6 +117,11 @@ class MainActivity : AppCompatActivity() {
                     viewModel.updateModeDuration(MainViewModel.Mode.LONG_BREAK, 1)
                     longLenghtTxt.text = MainViewModel.Mode.LONG_BREAK.duration.toString()
                 }
+
+                switch1.setOnCheckedChangeListener { _, isChecked ->
+                    viewModel.setSoundEnabled(isChecked)
+                }
+
             }
 
 
@@ -128,6 +136,7 @@ class MainActivity : AppCompatActivity() {
             pomoLenghtTxt.text = MainViewModel.Mode.POMO.duration.toString()
             shortLenghtTxt.text = MainViewModel.Mode.SHORT_BREAK.duration.toString()
             longLenghtTxt.text = MainViewModel.Mode.LONG_BREAK.duration.toString()
+            switch1.isChecked = viewModel.soundEnabled.value == true
         }
 
 
