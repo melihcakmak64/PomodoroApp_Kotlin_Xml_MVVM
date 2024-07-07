@@ -59,9 +59,9 @@ class MainViewModel(application: Application) :  AndroidViewModel(application) {
                 _time.value = (_time.value ?: 0) - 1
                 if (_time.value!! <= 0) {
                     _isPlaying.value = false
-                    stopTimer()
                     moveToNextMode()
-                    startTimer()
+                    _isPlaying.value = true
+
                 }
             }
         }
@@ -81,6 +81,7 @@ class MainViewModel(application: Application) :  AndroidViewModel(application) {
             5 -> _mode.value = Mode.LONG_BREAK
         }
         _time.value = _mode.value!!.duration * 60
+         stopTimer()
          startTimer()
     }
 
