@@ -81,6 +81,7 @@ class MainViewModel(application: Application) :  AndroidViewModel(application) {
             5 -> _mode.value = Mode.LONG_BREAK
         }
         _time.value = _mode.value!!.duration * 60
+         startTimer()
     }
 
     fun updateModeDuration(mode: Mode, increment: Int) {
